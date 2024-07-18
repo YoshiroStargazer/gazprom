@@ -37,11 +37,25 @@
         <a href="https://www.mrgtula.ru/faq/ask/" title="Оставить сообщение через форму обратной связи">Задать вопрос</a>
         <a href="mailto:mail@mrgtula.ru" title="Отправить сообщение по электронной почте">Написать письмо</a>
       </div>
-      <div class="header-images" >
+      <div class="header-images">
         <a href="/"><img src="images/logo.gif" title="Газпром межрегионгаз Тула" alt="Газпром межрегионгаз Тула" /></a>
         <img src="images/l_img.gif" />
       </div>
-    </header>
+      <button class="burger-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="mobile-menu">
+        <ul>
+          <li><a href="/">Главная страница</a></li>
+          <li><a href="/map/">Карта сайта</a></li>
+          <li><a href="https://www.mrgtula.ru/private-cabin/login/">Личный кабинет</a></li>
+          <li><a href="https://www.mrgtula.ru/faq/ask/">Задать вопрос</a></li>
+          <li><a href="mailto:mail@mrgtula.ru">Написать письмо</a></li>
+        </ul>
+      </nav>
+    </header>    
     <main>
       <aside>
         <form action="/search/index.php">
@@ -272,6 +286,11 @@
           menu.style.display = "block";
         }
       });
+
+      document.querySelector('.burger-menu').addEventListener('click', function() {
+    const menu = document.querySelector('.mobile-menu');
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+  });
     </script>
   </body>
 </html>
